@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar Form -->
+    <div class="sidebar">
+        <h2>Add Book</h2>
+        <input id="title" placeholder="Title">
+        <input id="author" placeholder="Author">
+        <input id="price" placeholder="Price" type="number">
+        <input id="imageURL" placeholder="Image URL">
+        <button onclick="addBook()">Add Book</button>
+
+        <hr style="margin: 20px 0;">
+
+        <button onclick="addDummyBooks()" class="dummy-btn">Add Dummy Books</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Book Library</h1>
+        <div class="grid" id="bookList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
